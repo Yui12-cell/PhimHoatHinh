@@ -1,0 +1,124 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #4da6ff; /* xanh dương nhạt */
+    --bg: #f4f9ff;
+    --box: #ffffff;
+}
+
+body{
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #e6f2ff, #ffffff);
+    display:flex;
+    flex-direction:column; 
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* container */
+.auth-container{
+    width:360px;
+    background: var(--box);
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(77,166,255,0.25); /* 👈 glow xanh */
+
+    overflow:hidden;
+
+    border:1px solid rgba(77,166,255,0.2);
+}
+
+/* tabs */
+.tabs{
+    display:flex;
+    background:#f0f6ff;
+}
+
+.tab{
+    flex:1;
+    text-align:center;
+    padding:15px;
+    cursor:pointer;
+    color:#666;
+    font-weight:bold;
+}
+
+.tab.active{
+    color:var(--main-color);
+    border-bottom:3px solid var(--main-color);
+    background:white;
+}
+
+/* form */
+.form{
+    padding:30px 25px; /*  tăng khoảng cách */
+    display:flex;
+    flex-direction:column;
+    gap:18px; /*  tạo khoảng cách giữa các input */
+}
+
+
+
+input{
+    width:100%;
+    padding:15px 18px; /* to hơn */
+    border-radius:12px;
+    border:1px solid #e0e0e0;
+    background:#f9fbff; /* nền sáng nhẹ */
+    outline:none;
+    margin:0;
+}
+
+input:focus{
+    border:1px solid var(--main-color);
+    box-shadow:0 0 8px rgba(77,166,255,0.5);
+    background:white;
+}
+
+.input-box{
+    padding:5px;
+}
+
+/* button */
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background: linear-gradient(135deg, #4da6ff, #66ccff);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow:0 5px 15px rgba(77,166,255,0.4);
+}
+
+/* hidden */
+.hidden{
+    display:none;
+}
+
+.back-home{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-home a{
+    color: #00aaff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-home a:hover{
+    text-decoration: underline;
+}

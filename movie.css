@@ -1,0 +1,146 @@
+/* MOVIE GRID */
+#movie-list{ /*Khung chứa toàn bộ các thẻ phim*/
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin:30px;
+}
+
+.movie-card{/*Từng thẻ phim riêng lẻ*/
+    width:180px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.movie-card:hover{/*Hiệu ứng khi di chuột vào thẻ phim*/
+    transform:scale(1.08);
+}
+
+.movie-card img{/*Hình ảnh poster phim*/
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* Tối ưu chống tràn ảnh chi tiết phim */
+#movie-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+/* Căn lề đều văn bản mô tả nội dung phim */
+#movie-desc {
+    margin-top: 10px;
+    color: #000000;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.movie-card p{/*Tên bộ phim dưới ảnh*/
+    text-align:center;
+    margin-top:8px;
+    font-weight:bold;
+}
+
+/* SUGGESTION BOX */
+#suggestions{/*Khung chứa danh sách gợi ý*/
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:white;
+    border-radius:10px;
+    margin-top:5px;
+    display:none;
+    z-index:999;
+}
+
+#suggestions div{/*Từng dòng gợi ý bên trong hộp*/
+    padding:10px;
+    cursor:pointer;
+}
+
+#suggestions div:hover{/*Khi di chuột qua từng dòng gợi ý*/
+    background:#eee;
+}
+
+/* layout 2 cột */
+#main-content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+#content {
+  flex: 3;
+}
+
+#sidebar {
+  flex: 1;
+}
+
+/* sidebar box */
+.sidebar-box {
+  background: rgb(188, 225, 255);
+  color: rgb(33, 11, 107);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* top phim = ảnh */
+.top-movie img {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.top-movie:hover img {
+  transform: scale(1.08);
+}
+
+.top-movie {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.top-movie:hover {
+  background: rgb(250, 250, 250);
+  transform: translateX(5px);
+}
+
+.overlay {
+  position: static;
+  background: none;
+  padding: 0;
+}
+
+.overlay p {
+  color: black;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.top-movie:hover .overlay p {
+  color: #0066ff;
+}
+
+/* hover đẹp */
+.top-movie:hover img {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  #main-content {
+    flex-direction: column;
+  }
+}

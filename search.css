@@ -1,0 +1,60 @@
+/* ===== THANH TÌM KIẾM ===== */
+
+.search-box{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.search-box input{
+    width:300px;
+    height:45px;
+    padding:0 45px 0 20px;
+    border:none;
+    outline:none;
+    border-radius:30px;
+}
+
+.search-box button{
+    position:absolute;  
+    right:5px;
+    height:35px;
+    width:35px;
+    border-radius:50%;
+}
+
+.search-box input:focus{
+    box-shadow:0 0 10px rgb(166, 215, 255);
+}
+
+.search-box button:hover{
+    background-color:rgb(166, 215, 255);
+}
+
+/* ===== GỢI Ý TÌM KIẾM ===== */
+
+#suggestions{
+    position:absolute;
+    top:50px;
+    left:0;
+    width:300px;
+    background:white;
+    list-style:none;
+    padding:0;
+    margin:0;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+    z-index:999;
+}
+
+#suggestions li{
+    padding:12px 15px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:15px;
+}
+
+#suggestions li:hover{
+    background-color:rgb(166, 215, 255);
+}

@@ -1,0 +1,173 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin:0px;
+}
+
+.container{
+    max-width:1200px;
+    margin:0px auto;
+}
+
+#header{
+    background-color: rgb(166, 215, 255);
+    position: relative;
+    z-index: 1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    justify-items:center;
+    align-items:center;
+}
+
+#logo{
+    padding:5px;
+}
+
+#logo img{
+    width: 80px;
+    height:auto;
+    display:block;
+}
+
+#menu{
+    display:flex;
+    list-style: none;
+    gap:5px;
+    flex-wrap:nowrap;
+}
+
+#menu li{
+    position:relative;
+}
+
+#menu li a{
+    color:rgb(33, 11, 107);
+    display:block;
+    padding:15px 15px;
+    text-decoration: none;
+    gap:15px;
+}
+
+#menu ul.sub-menu{
+    position:absolute;
+    background-color:rgb(213, 236, 255);
+    padding:10px;
+    list-style: none;
+    width:200px;
+    left:0px;
+    border: 1px solid rgb(192, 173, 254);
+    display:none;
+    flex-direction:column;
+    gap:5px;
+}
+
+#menu > li:hover > ul.sub-menu{
+    display:flex; /*  hiện cấp 2 */
+}
+
+#menu ul.sub-menu a{
+    padding:10px 15px;
+    background-color:white; /* mỗi item 1 nền riêng */
+    border-radius:5px;
+}
+
+#menu ul.sub-menu li:hover>a{
+    border-bottom: none; 
+}
+
+#menu ul.sub-menu li:last-child > a{
+    border:none;
+}
+
+#menu ul.sub-menu ul.sub-menu{
+    left:100%; /*  bám sát menu cha */
+    top:0;
+    min-width:220px; 
+    max-width:300px;
+    padding:0;
+    border:none;
+    display:none;
+}
+/* ===== MENU CẤP 3 GRID ===== */
+
+#menu ul.sub-menu > li:hover > ul.sub-menu{
+    display:grid; /* chỉ di tới cấp 2 mới mở cấp 3 */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap:8px;
+    padding:10px;
+}
+
+#menu ul.sub-menu ul.sub-menu li{
+    list-style:none;
+}
+
+#menu ul.sub-menu ul.sub-menu a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:50px;
+    border:none; /* bỏ luôn gạch */
+    padding:0;
+}
+
+/* thiết lập boder khi hover*/
+#menu>li>a{
+    position:relative;
+}
+
+#menu>li>a::before{
+    content:"";
+    height: 4px;
+    width:0px;
+    background: rgb(33, 11, 107);
+    position:absolute;
+    bottom:0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+#menu>li:hover>a::before{
+    width: 100%;
+}
+
+/* tránh tràn màn hình */
+#menu ul.sub-menu ul.sub-menu{
+    right:auto;
+}
+
+#menu li:last-child ul.sub-menu ul.sub-menu{
+    left:auto;
+    right:100%; /*nếu ở mép phải thì quay ngược lại */
+}
+
+@media (max-width: 768px){
+    #menu{
+        flex-direction:column;
+        background-color:rgb(166, 215, 255);
+    }
+
+    #menu li{
+        width:100%;
+    }
+
+    #menu ul.sub-menu{
+        position:static; 
+        width:100%;
+    }
+}
+
+/* ===== HOVER MENU CON ===== */
+
+#menu ul.sub-menu li a:hover{
+    background-color: rgb(90, 70, 220);
+    color: white;
+    border-radius:5px;
+}
+
+#menu ul.sub-menu ul.sub-menu a:hover{
+    background-color: rgb(90, 70, 220);
+    color:white;
+}
+
+

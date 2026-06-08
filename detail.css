@@ -1,0 +1,231 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background:#ecf8ff; /* nền sáng*/
+    margin:0;
+}
+
+/* hình ảnh và tiêu đề */
+#detail-container{
+    max-width:900px;
+    margin:50px auto;
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+    text-align:left; 
+}
+
+#movie-img{
+    width:300px;
+    border-radius:10px;
+}
+
+#movie-title{
+    margin-top:20px;
+    color:rgb(33, 11, 107); /* màu menu */
+}
+
+#movie-desc{
+    margin-top:10px;
+    color:#555;
+}
+
+.detail-left{
+    flex:1;
+}
+
+#movie-img{
+    width:100%;
+    max-width:300px;
+    border-radius:10px;
+}
+
+.detail-right{
+    flex:2;
+}
+
+#movie-title{
+    margin-top:0;
+    color:rgb(33, 11, 107);
+}
+
+#movie-desc{
+    margin-top:10px;
+    color:#555;
+    line-height:1.6;
+}
+
+/*bo góc và nền nhẹ*/
+#detail-container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+}
+
+.desc-title{
+    margin-top:20px;
+    color:rgb(33, 11, 107);
+    font-size:18px;
+}
+
+#movie-desc{
+    margin-top:10px;
+    color:#000000;
+    line-height:1.6;
+    text-align:justify;
+}
+
+/* ===== BUTTON ĐẸP ===== */
+
+.action-buttons{
+    margin:20px 0;
+    display:flex;
+    gap:15px;
+}
+
+/* NÚT XEM PHIM */
+.play-btn{
+    background:linear-gradient(135deg, #ff4d6d, #ff758c);
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
+    box-shadow:0 5px 15px rgba(255, 77, 109, 0.4);
+    transition:all 0.3s ease;
+}
+
+.play-btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 8px 20px rgba(255, 77, 109, 0.6);
+}
+
+/* NÚT THEO DÕI */
+.follow-btn{
+    background:white;
+    color:#333;
+    border:2px solid #ddd;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
+    transition:all 0.3s ease;
+}
+
+.follow-btn:hover{
+    background:#f0f0f0;
+    transform:translateY(-2px);
+}
+
+.play-btn{
+    background:linear-gradient(135deg, #007bff, #00c6ff); /* xanh nước biển */
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
+    box-shadow:0 5px 15px rgba(0, 123, 255, 0.4);
+    transition:all 0.3s ease;
+}
+
+.play-btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 8px 20px rgba(0, 123, 255, 0.6);
+}
+
+.follow-btn:active{
+    transform:scale(0.95);
+}
+
+
+/* breadcrum*/
+.breadcrumb {
+    margin: 15px 20px;
+    font-size: 14px;
+    color: rgb(33, 11, 107);
+}
+
+.breadcrumb a {
+    color: rgb(33, 11, 107);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #00aaff;
+}
+
+.breadcrumb span:hover {
+    color: #00aaff;
+    cursor: pointer;
+}
+
+
+/* TAG thể loại */
+.tag{
+    display:inline-block;
+    background: rgba(0, 170, 255, 0.15);
+    color:#00aaff;
+    padding:6px 12px;
+    margin:5px 5px 0 0;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.tag:hover{
+    background:#00aaff;
+    color:white;
+    cursor:pointer;
+}
+
+/* TAG trạng thái */
+.status{
+    display:inline-block;
+    background: rgba(0, 200, 100, 0.15);
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:500;
+}
+
+/* Trạng thái hoàn thành - màu xanh */
+.status.done{
+    background: rgba(0, 200, 100, 0.15);
+    color: #00c864;
+}
+
+/* Trạng thái đang chiếu - màu đỏ */
+.status.airing{
+    background: rgba(255, 0, 0, 0.15);
+    color: #ff3b3b;
+}
+
+.genre-line strong{
+    color: rgb(33, 11, 107); /* giống tiêu đề Nội dung */
+}
+
+/*không gạch chân dưới thể loại*/
+.tag{
+    text-decoration: none;
+}
+
+/*thời gian*/
+.time-tag{
+    display:inline-block;
+    background: rgba(255, 165, 0, 0.15); /* cam nhạt */
+    color: orange;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:500;
+}

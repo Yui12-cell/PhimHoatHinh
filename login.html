@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="login.css">
+<body>
+
+
+<div class="auth-container">
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="showLogin()">Đăng nhập</div>
+        <div class="tab" onclick="showRegister()">Đăng ký</div>
+    </div>
+
+
+    <!-- LOGIN -->
+    <div class="form" id="loginForm">
+        <input type="text" id="loginUser" placeholder="Tên tài khoản">
+        <input type="password" id="loginPass" placeholder="Mật khẩu">
+        <button onclick="login()">Đăng nhập</button>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="form hidden" id="registerForm">
+        <input type="text" id="regUser" placeholder="Biệt danh">
+        <input type="email" placeholder="Email">
+        <input type="password" id="regPass" placeholder="Mật khẩu">
+        <input type="password" placeholder="Nhập lại mật khẩu">
+        <button onclick="register()">Tạo tài khoản</button>
+    </div>
+
+</div>
+
+    <div class="back-home">
+        <a href="index.html">← Quay về trang chủ</a>
+    </div>
+
+<script src="login.js"></script>
+</body>
+</html>
