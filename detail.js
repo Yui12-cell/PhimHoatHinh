@@ -57,7 +57,7 @@ let movieData = {
 
     "Attack On Titan": {
         name: "Attack On Titan",
-        img: "https://cdn.animevietsub.by/data/poster/2017/09/16/animevsub-iQ3nal5F91.jpg",
+        img: "https://animehay02.site/upload/poster/177.jpg",
         genres: "Hành động, Viễn tưởng, Siêu  nhiên",
         status: "Hoàn thành",
         time:"2013",
